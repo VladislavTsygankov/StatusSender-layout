@@ -1,0 +1,107 @@
+.paging-container {
+    padding: 10px 0;
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+
+.paging {
+    display: flex;
+    color: rgb(109, 108, 119);
+}
+
+.paging__item {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid rgb(221, 221, 221);
+    transition: 0.1s ease;
+}
+
+.paging__item:not(:first-of-type):hover {
+    background-color: rgb(242, 240, 239);
+    border-color: rgb(221, 221, 221);
+    color: rgb(109, 108, 119);
+}
+
+.paging__item:focus {
+    background-color: rgb(121, 119, 112);
+    border-color: rgb(121, 119, 112);
+    color: #eee;
+}
+
+.arrow-icon {
+    padding: 0 7px;
+}
+
+.prev,
+.next {
+    margin: 0 5px;
+    border-radius: 3px;
+}
+
+.paging .prev {
+    padding-right: 15px;
+}
+
+.paging .next {
+    padding-left: 15px;
+}
+
+.disable {
+    opacity: 0.5;
+}
+
+.focus {
+    background-color: rgb(121, 119, 112);
+    border-color: rgb(121, 119, 112);
+    color: #eee;
+}
+
+.page-info {
+    padding: 5px;
+    margin: 10px;
+    text-align: end;
+}
+
+.page__numbers {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1000px) {
+    .paging-container {
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .paging__item {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .page-info {
+        width: 100%;
+    }
+    .paging {
+        margin: 8px 0;
+        width: 90%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .paging__item {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .page__numbers {
+        display: none;
+    }
+    .page-info {
+        margin: 0;
+    }
+}

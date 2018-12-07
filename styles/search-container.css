@@ -14,12 +14,14 @@
     justify-content: row;
     align-items: center;
     flex-grow: 1;
+    flex-wrap: wrap;
 }
 
 .search-filters {
     display: flex;
     align-items: center;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .search-input-container{
@@ -79,9 +81,6 @@
     .search-icon{
         margin: 0;
     }
-    .item-dropdown {
-        margin-right: 0;
-    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -92,5 +91,17 @@
     }
     .search-result{
         padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .search-input-container{
+        min-width: 1px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .item{
+        margin: 4px 0;
     }
 }
