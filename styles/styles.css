@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
 }
 
@@ -14,7 +14,7 @@ h1 {
     font-weight: 100;
 }
 
-.menu-bar{
+.menu-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ h1 {
     font-size: 15px;
 }
 
-.menu-bar__item{
+.menu-bar__item {
     padding: 20px;
     cursor: pointer;
     display: flex;
@@ -34,26 +34,32 @@ h1 {
     transition: .15s ease;
 }
 
-.menu-bar__item:hover{
-    color:black;
+.menu-bar__item:hover {
+    color: black;
 }
 
-.menu-bar__icon{
+.menu-bar__icon {
     padding-right: 10px;
 }
 
-.sign-out{
+.sign-out {
     font-size: 20px;
     font-weight: 300;
 }
 
-.menu-bar__capture{
+.menu-bar__capture {
     font-weight: 700;
     font-size: 17px;
 }
 
-.angle-right{
-    padding: 0 17px;
+.angle-right {
+    padding: 0 14px;
+    padding-top: 2px;
+}
+
+.min-size__capture {
+    display: none;
+    text-align: center;
 }
 
 .banner {
@@ -66,14 +72,15 @@ h1 {
     align-items: center;
 }
 
-.banner__greeting{
+.banner__greeting {
     font-size: 35px;
     letter-spacing: 3px;
     font-weight: 100;
     user-select: none;
+    padding: 10px 5px;
 }
 
-.footer{
+.footer {
     background: rgb(230, 230, 229);
     height: 70px;
     color: black;
@@ -82,11 +89,36 @@ h1 {
     align-items: center;
 }
 
-@media screen and (max-width: 450px){
-    .menu-bar__item{
+@media screen and (max-width: 890px) {
+    .banner__greeting {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .banner {
+        align-items: baseline;
+    }
+    .banner__greeting {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .banner__greeting {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .menu-bar__item {
         padding: 10px 7px;
     }
-    .menu-bar__capture{
+    .several-size__capture {
         display: none;
+    }
+    .min-size__capture {
+        display: block;
     }
 }
